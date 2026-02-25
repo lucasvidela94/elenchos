@@ -2,38 +2,24 @@
 
 Sistema de registro y trazabilidad de actividades municipales en blockchain.
 
+## Características
+
+- Registro inmutable de actividades gubernamentales
+- Trazabilidad completa con timestamps en blockchain
+- Interfaz web moderna y accesible
+- API RESTful para integraciones
+- Contratos inteligentes auditables en Polygon
+
 ## Stack Tecnológico
 
-### Blockchain
-- **Red principal**: Polygon PoS
-- **Red de testing**: Mumbai Testnet
-- **Lenguaje**: Solidity ^0.8.20
-- **Framework**: Foundry
-- **RPC Provider**: Alchemy
-- **Wallet**: ethers.js / viem
+| Capa                | Tecnología                                               |
+| ------------------- | -------------------------------------------------------- |
+| **Blockchain**      | Polygon PoS, Solidity ^0.8.20, Foundry                   |
+| **Backend**         | Node.js, TypeScript, Fastify, PostgreSQL, Redis          |
+| **Frontend**        | React, TypeScript, Vite, wagmi, RainbowKit, Tailwind CSS |
+| **Infraestructura** | Docker, GitHub Actions, Grafana, Prometheus              |
 
-### Backend
-- **Lenguaje**: TypeScript + Node.js
-- **Framework API**: Fastify
-- **Base de datos**: PostgreSQL
-- **Cache**: Redis
-- **Indexer**: Servicio propio con WebSocket
-- **Storage**: IPFS (Pinata)
-- **Autenticación**: JWT + API Key + Wallet signature
-
-### Frontend
-- **Framework**: React + TypeScript + Vite
-- **Web3 hooks**: wagmi + viem
-- **UI Wallets**: RainbowKit
-- **Estilos**: Tailwind CSS + shadcn/ui
-
-### Infraestructura
-- **Contenedores**: Docker + Docker Compose
-- **CI/CD**: GitHub Actions
-- **Hosting**: Railway/Render + Vercel
-- **Monitoreo**: Grafana + Prometheus
-
-## Estructura del Proyecto
+## Estructura
 
 ```
 elenchos/
@@ -44,34 +30,38 @@ elenchos/
 │   ├── contracts/        # Contratos Solidity (Foundry)
 │   ├── shared/           # Código compartido
 │   └── ui/               # Componentes UI
-└── infrastructure/
-    ├── docker/           # Configuración Docker
-    ├── k8s/              # Kubernetes manifests
-    └── github-actions/   # Workflows CI/CD
+└── infrastructure/       # Docker, K8s, CI/CD
 ```
 
-## Inicio Rápido
+## Requisitos
 
-### Requisitos
 - Node.js >= 20.0.0
 - pnpm >= 9.0.0
 - Docker y Docker Compose
 - Foundry (para contratos)
 
-### Instalación
+## Instalación
 
 ```bash
 # Instalar dependencias
 pnpm install
 
-# Iniciar servicios de infraestructura
+# Iniciar servicios
 pnpm docker:up
 
-# Iniciar desarrollo
+# Desarrollo
 pnpm dev
 ```
+
+## Scripts
+
+| Comando          | Descripción               |
+| ---------------- | ------------------------- |
+| `pnpm dev`       | Iniciar modo desarrollo   |
+| `pnpm build`     | Compilar producción       |
+| `pnpm docker:up` | Levantar servicios Docker |
+| `pnpm test`      | Ejecutar tests            |
 
 ## Licencia
 
 MIT
-# elenchos
