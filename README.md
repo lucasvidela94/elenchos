@@ -1,67 +1,67 @@
 # Elenchos
 
-Sistema de registro y trazabilidad de actividades municipales en blockchain.
+Blockchain-based municipal activity registration and traceability system.
 
-## Características
+## Features
 
-- Registro inmutable de actividades gubernamentales
-- Trazabilidad completa con timestamps en blockchain
-- Interfaz web moderna y accesible
-- API RESTful para integraciones
-- Contratos inteligentes auditables en Polygon
+- Immutable recording of government activities
+- Complete traceability with blockchain timestamps
+- Modern and accessible web interface
+- RESTful API for integrations
+- Auditable smart contracts on Polygon
 
-## Stack Tecnológico
+## Tech Stack
 
-| Capa                | Tecnología                                               |
-| ------------------- | -------------------------------------------------------- |
-| **Blockchain**      | Polygon PoS, Solidity ^0.8.20, Foundry                   |
-| **Backend**         | Node.js, TypeScript, Fastify, PostgreSQL, Redis          |
-| **Frontend**        | React, TypeScript, Vite, wagmi, RainbowKit, Tailwind CSS |
-| **Infraestructura** | Docker, GitHub Actions, Grafana, Prometheus              |
+| Layer              | Technology                                               |
+| ------------------ | -------------------------------------------------------- |
+| **Blockchain**     | Polygon PoS, Solidity ^0.8.20, Foundry                   |
+| **Backend**        | Node.js, TypeScript, Fastify, PostgreSQL, Redis          |
+| **Frontend**       | React, TypeScript, Vite, wagmi, RainbowKit, Tailwind CSS |
+| **Infrastructure** | Docker, GitHub Actions, Grafana, Prometheus              |
 
-## Estructura
+## Project Structure
 
 ```
 elenchos/
 ├── apps/
-│   ├── backend/          # API Fastify
+│   ├── backend/          # Fastify API
 │   └── frontend/         # React + Vite
 ├── packages/
-│   ├── contracts/        # Contratos Solidity (Foundry)
-│   ├── shared/           # Código compartido
-│   └── ui/               # Componentes UI
+│   ├── contracts/        # Solidity contracts (Foundry)
+│   ├── shared/           # Shared code
+│   └── ui/               # UI components
 └── infrastructure/       # Docker, K8s, CI/CD
 ```
 
-## Requisitos
+## Requirements
 
 - Node.js >= 20.0.0
 - pnpm >= 9.0.0
-- Docker y Docker Compose
-- Foundry (para contratos)
+- Docker and Docker Compose
+- Foundry (for contracts)
 
-## Instalación
+## Installation
 
 ```bash
-# Instalar dependencias
+# Install dependencies
 pnpm install
 
-# Iniciar servicios
+# Start services
 pnpm docker:up
 
-# Desarrollo
+# Development
 pnpm dev
 ```
 
 ## Scripts
 
-| Comando          | Descripción               |
-| ---------------- | ------------------------- |
-| `pnpm dev`       | Iniciar modo desarrollo   |
-| `pnpm build`     | Compilar producción       |
-| `pnpm docker:up` | Levantar servicios Docker |
-| `pnpm test`      | Ejecutar tests            |
+| Command          | Description            |
+| ---------------- | ---------------------- |
+| `pnpm dev`       | Start development mode |
+| `pnpm build`     | Build for production   |
+| `pnpm docker:up` | Start Docker services  |
+| `pnpm test`      | Run tests              |
 
-## Licencia
+## License
 
 MIT
